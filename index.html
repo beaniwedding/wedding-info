@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="robots" content="noindex, nofollow" />
+
+  <meta http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      style-src   'self' 'unsafe-inline' https://fonts.googleapis.com;
+      font-src    'self' https://fonts.gstatic.com;
+      img-src     'self' data:;
+      frame-src   https://www.google.com https://maps.google.com;
+      script-src  'self';
+      connect-src 'none';
+      object-src  'none';
+      base-uri    'self';
+      form-action 'none';
+    "
+  />
+
+  <!-- Prevent clickjacking -->
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <!-- Prevent MIME sniffing -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <!-- Referrer policy -->
+  <meta name="referrer" content="no-referrer" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================ -->
+  <!-- NAVIGATION                                                    -->
+  <!-- ============================================================ -->
+  <nav id="site-nav" role="navigation" aria-label="Main navigation">
+
+    <!-- Logo (top-left, always visible) -->
+    <a class="nav-logo" href="#home" aria-label="Back to top" >
+      <img src="images/jb_logo.svg" alt="J&B" width="120" height="80">
+      <span class="wedding-date">4.17.2027</span>
+    </a>
+
+    <!-- Page navigation (centered) -->
+    <ul class="nav-links" role="list">
+      <li><a href="#home"   class="active">Home</a></li>
+      <li><a href="#story">Our Story</a></li>
+      <li><a href="#travel">Travel</a></li>
+    </ul>
+
+    <!-- Mobile toggle -->
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+
+  <!-- ============================================================ -->
+  <!-- PAGE 1: HOME / HERO                                           -->
+  <!-- ============================================================ -->
+  <section id="home" class="page-section" aria-label="Welcome">
+
+    <!-- Slideshow background -->
+    <div class="slideshow" role="img" aria-label="Engagement photo slideshow">
+
+      <div class="slide" style="background-image: url('images/photo1.jpg');" aria-hidden="true"></div>
+      <div class="slide" style="background-image: url('images/photo2.jpg');" aria-hidden="true"></div>
+      <div class="slide" style="background-image: url('images/photo3.jpg');" aria-hidden="true"></div>
+      <div class="slide" style="background-image: url('images/photo4.jpg');" aria-hidden="true"></div>
+      <!-- Add more slides here following the same pattern -->
+
+    </div>
+
+    <!-- Gradient overlay for text legibility -->
+    <div class="slide-overlay" aria-hidden="true"></div>
+
+    <!-- Slideshow navigation arrows -->
+    <button class="slide-btn prev" aria-label="Previous photo">&#8592;</button>
+    <button class="slide-btn next" aria-label="Next photo">&#8594;</button>
+
+    <!-- Slideshow dot indicators -->
+    <div class="slide-dots" role="tablist" aria-label="Slideshow navigation">
+      <!-- EDIT: Must match the number of .slide divs above -->
+      <button class="dot" role="tab" aria-label="Photo 1"></button>
+      <button class="dot" role="tab" aria-label="Photo 2"></button>
+      <button class="dot" role="tab" aria-label="Photo 3"></button>
+      <button class="dot" role="tab" aria-label="Photo 4"></button>
+    </div>
+
+    <!-- Hero text -->
+    <div class="hero-content">
+
+      <h1 class="hero-names">
+        Jeani <span class="ampersand">&amp;</span> Bennett
+      </h1>
+
+      <p class="hero-date">April 17, 2027</p>
+
+      <p class="hero-venue">Gramercy Mansion</p>
+
+      <p class="hero-venue">1400&nbsp;Greenspring&nbsp;Vly&nbsp;Rd&nbsp;· Stevenson,&nbsp;MD&nbsp;21153</p>
+
+      <p class="hero-scroll-hint">&#8595; &nbsp; scroll to explore</p>
+    </div>
+
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- PAGE 2: OUR STORY                                             -->
+  <!-- ============================================================ -->
+  <section id="story" class="page-section" aria-labelledby="story-title">
+
+    <div class="section-inner">
+
+      <p  class="section-eyebrow fade-in">Some quick J&B lore</p>
+      <h2 class="section-title fade-in delay-1" id="story-title">Our Story</h2>
+
+      <div class="floral-divider fade-in delay-2">
+        <svg width="72" height="16" viewBox="0 0 72 16" aria-hidden="true" focusable="false" fill="none">
+          <!-- Three small floral dots with petal rings -->
+          <circle cx="12" cy="8" r="2.5" fill="#c0899a" opacity="0.7"/>
+          <circle cx="12" cy="8" r="5" stroke="#c0899a" stroke-width="0.7" opacity="0.35"/>
+          <circle cx="36" cy="8" r="3" fill="#c0899a" opacity="0.85"/>
+          <circle cx="36" cy="8" r="6" stroke="#c0899a" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="60" cy="8" r="2.5" fill="#c0899a" opacity="0.7"/>
+          <circle cx="60" cy="8" r="5" stroke="#c0899a" stroke-width="0.7" opacity="0.35"/>
+          <!-- Stem connecting dots -->
+          <line x1="17" y1="8" x2="30" y2="8" stroke="#b5c9a1" stroke-width="0.8" opacity="0.7"/>
+          <line x1="42" y1="8" x2="55" y2="8" stroke="#b5c9a1" stroke-width="0.8" opacity="0.7"/>
+        </svg>
+      </div>
+
+      <div class="story-layout">
+
+        <!-- Photo column -->
+        <div class="story-photo-frame fade-in">
+          <div class="story-photo">
+            <img src="images/our-story.jpg" alt="Jeani and Bennett" />
+          </div>
+        </div>
+
+        <!-- Text column -->
+        <div class="story-text fade-in delay-2">
+
+          <!-- <p class="pull-quote">
+            &ldquo;From the moment we met, we knew this was something extraordinary.&rdquo;
+          </p> -->
+          <p>
+            It all started one fateful day, circa 2019, when Jeani and Bennett both decided to 
+            dabble in dating apps and recklessly swiped right. Bennett was captivated by her devotion
+            to alpacas and Studio Ghibli, and Jeani was spellbound by his apparent care-free attitude
+            and self-proclaimed musical talent. After a bowl of pho and a romantic walk through campus,
+            they realized how incredibly cool each other were, and the rest was history.
+          </p>
+          <p>
+            After many years of studying, tending to cats, and playing board games together, Beani were
+            ready to take things to the next level. All it took was an oddly specific fortune cookie that
+            prophesied, "All your dreams will come true in December." That month, on a tranquil winter
+            walk through one of their favorite parks, the couple sat atop a large boulder and reminisced
+            about their many adventures. It was at this moment when Bennett got up on one knee and
+            proposed &mdash; all without falling backwards or dropping the ring. Jeani held her breath, 
+            kept her composure, and said yes!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Decorative corner flourishes (pure CSS/SVG, no external fetch) -->
+    <svg class="corner-flourish tl" viewBox="0 0 80 80" aria-hidden="true" focusable="false">
+      <path d="M0,80 Q0,0 80,0" fill="none" stroke="#b5c9a1" stroke-width="1.5"/>
+      <circle cx="8"  cy="72" r="3" fill="#c0899a" opacity="0.6"/>
+      <circle cx="72" cy="8"  r="3" fill="#c0899a" opacity="0.6"/>
+      <path d="M20,60 Q20,20 60,20" fill="none" stroke="#c0899a" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+    <svg class="corner-flourish tr" viewBox="0 0 80 80" aria-hidden="true" focusable="false">
+      <path d="M0,80 Q0,0 80,0" fill="none" stroke="#b5c9a1" stroke-width="1.5"/>
+      <circle cx="8"  cy="72" r="3" fill="#c0899a" opacity="0.6"/>
+      <circle cx="72" cy="8"  r="3" fill="#c0899a" opacity="0.6"/>
+      <path d="M20,60 Q20,20 60,20" fill="none" stroke="#c0899a" stroke-width="0.8" opacity="0.5"/>
+    </svg>
+
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- PAGE 3: TRAVEL                                                -->
+  <!-- ============================================================ -->
+  <section id="travel" class="page-section" aria-labelledby="travel-title">
+
+    <div class="section-inner">
+
+      <p  class="section-eyebrow fade-in">Where am I going? What's happening?</p>
+      <h2 class="section-title fade-in delay-1" id="travel-title">Travel &amp; Accommodations</h2>
+      <!-- <p  class="section-subtitle fade-in delay-2">Everything you need to plan your visit</p> -->
+
+      <div class="floral-divider fade-in delay-3">
+        <svg width="72" height="16" viewBox="0 0 72 16" aria-hidden="true" focusable="false" fill="none">
+          <circle cx="12" cy="8" r="2.5" fill="#c0899a" opacity="0.7"/>
+          <circle cx="12" cy="8" r="5" stroke="#c0899a" stroke-width="0.7" opacity="0.35"/>
+          <circle cx="36" cy="8" r="3" fill="#c0899a" opacity="0.85"/>
+          <circle cx="36" cy="8" r="6" stroke="#c0899a" stroke-width="0.8" opacity="0.4"/>
+          <circle cx="60" cy="8" r="2.5" fill="#c0899a" opacity="0.7"/>
+          <circle cx="60" cy="8" r="5" stroke="#c0899a" stroke-width="0.7" opacity="0.35"/>
+          <line x1="17" y1="8" x2="30" y2="8" stroke="#b5c9a1" stroke-width="0.8" opacity="0.7"/>
+          <line x1="42" y1="8" x2="55" y2="8" stroke="#b5c9a1" stroke-width="0.8" opacity="0.7"/>
+        </svg>
+      </div>
+
+      <!-- Google Maps embed -->
+      <div class="map-frame fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3081.9147392268233!2d-76.69980242316892!3d39.426052415337296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c81104854b6d9b%3A0x6a1f44394f15a579!2sGramercy%20Mansion!5e0!3m2!1sen!2sus!4v1778459632974!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Shown if the iframe fails to load -->
+        <div class="map-placeholder" aria-live="polite">
+          <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true" focusable="false" fill="none" stroke="#8a7d6e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 3C11.03 3 7 7.03 7 12c0 7 9 17 9 17s9-10 9-17c0-4.97-4.03-9-9-9z"/>
+            <circle cx="16" cy="12" r="3"/>
+          </svg>
+          <strong>Gramercy Mansion</strong>
+          <!-- EDIT: Update address -->
+          123 Mansion Lane, Estate City, ST 00000<br />
+          <em style="font-size:0.85rem; margin-top:0.5rem;">
+            Map could not be loaded. Search "Gramercy Mansion" on Google Maps.
+          </em>
+        </div>
+      </div>
+
+      <!-- Travel info cards -->
+      <div class="travel-grid">
+
+        <!-- Card 1: Getting There -->
+        <div class="travel-card fade-in delay-1">
+          <!-- Compass / travel icon -->
+          <svg class="card-icon-svg" viewBox="0 0 28 28" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="14" cy="14" r="10"/>
+            <polygon points="14,6 16.5,13.5 14,12 11.5,13.5" fill="currentColor" opacity="0.7"/>
+            <polygon points="14,22 11.5,14.5 14,16 16.5,14.5" fill="currentColor" opacity="0.3"/>
+            <circle cx="14" cy="14" r="1.5" fill="currentColor"/>
+          </svg>
+          <h3>Getting There</h3>
+          <ul>
+            <li>
+              <strong>By Air</strong>
+              Nearest airport: Baltimore Washington International (BWI) — 30-60 min drive, depending on traffic.
+            </li>
+            <li>
+              <strong>By Car</strong>
+              Ample free parking at Gramercy Mansion.<br />
+              Gramercy Mansion, 1400&nbsp;Greenspring&nbsp;Vly&nbsp;Rd, Stevenson,&nbsp;MD&nbsp;21153</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Card 2: Hotels -->
+        <!-- <div class="travel-card fade-in">
+          <svg class="card-icon-svg" viewBox="0 0 28 28" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="10" width="20" height="15" rx="1"/>
+            <path d="M10 25V18h8v7"/>
+            <path d="M4 10l10-7 10 7"/>
+            <rect x="10" y="13" width="3" height="3" rx="0.5"/>
+            <rect x="15" y="13" width="3" height="3" rx="0.5"/>
+          </svg>
+          <h3>Recommended Hotels</h3>
+          <ul>
+            <li>
+              <strong>The Grand Estate Inn</strong>
+              0.5 miles from venue · Starting from $220/night
+            </li>
+            <li>
+              <strong>Mansion House Suites</strong>
+              On-site accommodation · Ask for the wedding block rate
+            </li>
+            <li>
+              <strong>Parkside Boutique Hotel</strong>
+              1.2 miles from venue · Starting from $175/night
+            </li>
+            <li>
+              <strong>Countryside B&amp;B</strong>
+              2 miles from venue · Charming &amp; cosy, book early
+            </li>
+          </ul>
+        </div> -->
+
+        <!-- Card 3: Good to Know -->
+        <div class="travel-card fade-in delay-2">
+          <!-- Info / good-to-know icon -->
+          <svg class="card-icon-svg" viewBox="0 0 28 28" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="14" cy="14" r="10"/>
+            <line x1="14" y1="12" x2="14" y2="20"/>
+            <circle cx="14" cy="9" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          <h3>Good to Know</h3>
+          <ul style="margin-top:1rem;">
+            <li>
+              <strong>Ceremony Time</strong>
+              Saturday, April 17, 5:00 PM EDT - Plan to arrive 15 minutes early.
+            </li>
+            <li>
+              <strong>Traffic Warning</strong>
+              Beltway (I-695) traffic may cause travel delays. Please budget +30min when planning in advance, and check for traffic updates on the wedding day.
+            </li>
+            <li>
+              <strong>Dress Code</strong>
+              Garden Formal - Elegant spring wedding attire; suits and midi or floor-length dresses are encouraged.
+            </li>
+            <!-- <li>
+              <strong>Questions?</strong>
+              Contact us: hello&#64;yourweddingdomain.com
+            </li> -->
+          </ul>
+        </div>
+
+      </div><!-- /.travel-grid -->
+
+    </div><!-- /.section-inner -->
+
+    <!-- Decorative corner flourishes -->
+    <svg class="corner-flourish bl" viewBox="0 0 80 80" aria-hidden="true" focusable="false">
+      <path d="M0,80 Q0,0 80,0" fill="none" stroke="#b5c9a1" stroke-width="1.5"/>
+      <circle cx="8"  cy="72" r="3" fill="#c0899a" opacity="0.6"/>
+      <circle cx="72" cy="8"  r="3" fill="#c0899a" opacity="0.6"/>
+    </svg>
+    <svg class="corner-flourish br" viewBox="0 0 80 80" aria-hidden="true" focusable="false">
+      <path d="M0,80 Q0,0 80,0" fill="none" stroke="#b5c9a1" stroke-width="1.5"/>
+      <circle cx="8"  cy="72" r="3" fill="#c0899a" opacity="0.6"/>
+      <circle cx="72" cy="8"  r="3" fill="#c0899a" opacity="0.6"/>
+    </svg>
+
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                        -->
+  <!-- ============================================================ -->
+  <footer id="site-footer" role="contentinfo">
+    <!-- EDIT: Update names and date -->
+    <div class="footer-monogram">
+      <img src="images/jb_logo_flowers.svg" alt="J&B" viewBox="0 0 160 160" style="width:auto;height:150px;display:block;margin:0 auto 0.5rem;">
+    </div>
+    <div class="footer-date">Jeani &amp; Bennett &nbsp;&middot;&nbsp; April&nbsp;17,&nbsp;2027</div>
+    <p class="footer-note">
+      More details to follow
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
